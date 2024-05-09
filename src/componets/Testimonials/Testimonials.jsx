@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Testimonials.css'
 import next_icon from '../../assets/right-arroww_.png'
 import back_icon from '../../assets/left-arroww_.png'
@@ -9,12 +9,28 @@ import user_4 from '../../assets/front-view.jpg'
 
 
 const Testimonials = () => {
+
+    const slider = useRef();
+    let tx=0;
+  const slideForward = ()=>{
+    if(tx >-50){
+      tx -=25;
+    }
+    slider.current.style.transform=`translateX(${tx}%)`;
+  }
+
+  const slideBackward = ()=>{
+    if(tx < 0){
+      tx +=25;
+    }
+    slider.current.style.transform=`translateX(${tx}%)`;
+  }
   return (
     <div className='testimonials'>
-        <img src={next_icon} alt=""  className='next-btn'/>
-        <img src={back_icon} alt=""  className='back-btn'/>
+        <img src={next_icon} alt=""  className='next-btn' onClick={slideForward}/>
+        <img src={back_icon} alt=""  className='back-btn' onClick={slideBackward}/>
         <div className="slider">
-          <ul>
+          <ul ref={slider}>
             <li>
               <div className="slide">
                 <div className="user-info">
@@ -52,7 +68,7 @@ const Testimonials = () => {
                 <div className="user-info">
                 <img src={user_3} alt="" />
                 <div>
-                    <h3>JMohammed Sulesh</h3>
+                    <h3>Mohammed Sulesh</h3>
                     <span>Tanga,Tanzania</span>
                     </div>
                   </div>

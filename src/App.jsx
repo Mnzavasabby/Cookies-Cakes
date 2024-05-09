@@ -6,6 +6,7 @@ import Title from './componets/Title/Title'
 import About from './componets/About/About'
 import Food from './componets/Food/Food'
 import Testimonials from './componets/Testimonials/Testimonials'
+import Contact from './componets/Contact/Contact'
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Food/>
           <Title subTitle='Testimonials' title='What customers say'/>
           <Testimonials/>
+          <Title subTitle='Contact Us' title='Get in Touch'/>
+          <Contact/>
       </div>
       
     </div>
