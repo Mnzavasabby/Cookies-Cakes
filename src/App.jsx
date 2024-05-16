@@ -7,6 +7,7 @@ import About from './componets/About/About'
 import Food from './componets/Food/Food'
 import Testimonials from './componets/Testimonials/Testimonials'
 import Contact from './componets/Contact/Contact'
+import Footer from './componets/Footer/Footer'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Testimonials/>
           <Title subTitle='Contact Us' title='Get in Touch'/>
           <Contact/>
+          <Footer/>
       </div>
       
     </div>

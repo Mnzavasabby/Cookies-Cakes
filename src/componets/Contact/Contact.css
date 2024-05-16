@@ -15,5 +15,36 @@
     color: #000f38;
     font-weight: 600;
     font-size: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
+.contact-col p{
+    max-width: 450px;
+    list-style: 0.3;
+}
+.contact-col ul li{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.contact-col ul li img{
+    width: 25px;
+    margin-right: 10px ;
+}
+ .btn.dark-btnn{
+  background-color: #212ea0;
+  color: white;
+ }
+ .contact form input, .contact form textarea{
+    display: block;
+    width: 100%;
+    background-color: #ebecfe;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+ }
 
